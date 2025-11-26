@@ -4,48 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
+    html {
+      scroll-behavior: smooth;
     }
-    header {
-      background: #222;
-      color: #fff;
-      padding: 2rem;
-      text-align: center;
+    nav a::after {
+      content: ' 🔗';
     }
-    nav {
-      background: #333;
-      padding: 1rem;
-      text-align: center;
+    #contact p::before {
+      content: '📧 ';
     }
-    nav a {
-      color: #fff;
-      margin: 0 1rem;
-      text-decoration: none;
-    }
-    section {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-      background: #fff;
-      margin-top: 2rem;
-      border-radius: 10px;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-      color: #777;
+    #projects li::before {
+      content: '🎮 ';
+      margin-right: 0.5rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Your Name</h1>
-    <p>Web Developer | Designer | Creator</p>
+    <h1>Wajeeha Noor</h1>
+    <p>Game Developer | Creator 🎮</p>
   </header>
 
   <nav>
@@ -56,10 +36,24 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Write a short bio about yourself.</p>
+    <p>Hello! I'm Wajeeha Noor, a passionate game developer dedicated to creating immersive and engaging experiences. I specialize in Unity/C# and have experience designing gameplay mechanics, building interactive worlds, and bringing characters to life. ✨</p>
+    <p>I thrive on turning creative ideas into playable adventures, collaborating with teams, and constantly learning new technologies to push the boundaries of game design. My goal is to craft games that captivate players and leave a lasting impression. 🚀</p>
   </section>
 
-  <section id="projects">
+  <section id="certificates">
+<h2>Certification</h2>
+<ul>
+<li>
+  <img src="images/certificate1.png" alt="Certificate 1">
+  <strong>Unity Game Development Training Program</strong>
+  <p>Hands-on Unity projects, C# scripting, and immersive game mechanics to bring creative ideas to life.</p>
+</li>
+
+
+</ul>
+</section>
+
+   <section id="projects">
     <h2>Projects</h2>
     <ul>
       <li><strong>Project 1</strong> – description</li>
@@ -73,7 +67,7 @@
   </section>
 
   <footer>
-    <p>© 2025 Your Name</p>
+    <p>© 2025 Wajeeha Noor</p>
   </footer>
 </body>
 </html>
