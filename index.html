@@ -4,15 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
+
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
+
   <style>
     html {
       scroll-behavior: smooth;
     }
-    nav a::after {
+    /* nav a::after {
       content: ' 🔗';
-    }
+    } */
     #contact p::before {
       content: '📧 ';
     }
@@ -22,52 +24,71 @@
     }
   </style>
 </head>
+
 <body>
+
+  <!-- HEADER -->
   <header>
     <h1>Wajeeha Noor</h1>
     <p>Game Developer | Creator 🎮</p>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <!-- NAVIGATION -->
+ <nav>
+  <a data-section="about">About</a>
+  <a data-section="certificates">Certificates</a>
+  <a data-section="projects">Projects</a>
+  <a data-section="contact">Contact</a>
+</nav>
 
+
+  <!-- ABOUT SECTION -->
   <section id="about">
     <h2>About Me</h2>
     <p>Hello! I'm Wajeeha Noor, a passionate game developer dedicated to creating immersive and engaging experiences. I specialize in Unity/C# and have experience designing gameplay mechanics, building interactive worlds, and bringing characters to life. ✨</p>
     <p>I thrive on turning creative ideas into playable adventures, collaborating with teams, and constantly learning new technologies to push the boundaries of game design. My goal is to craft games that captivate players and leave a lasting impression. 🚀</p>
   </section>
 
+  <!-- CERTIFICATES SECTION -->
   <section id="certificates">
-<h2>Certification</h2>
-<ul>
-<li>
-  <img src="images/certificate1.png" alt="Certificate 1">
-  <strong>Unity Game Development Training Program</strong>
-  <p>Hands-on Unity projects, C# scripting, and immersive game mechanics to bring creative ideas to life.</p>
-</li>
-
-
-</ul>
-</section>
-
-   <section id="projects">
-    <h2>Projects</h2>
+    <h2>Certificates</h2>
     <ul>
-      <li><strong>Project 1</strong> – description</li>
-      <li><strong>Project 2</strong> – description</li>
+      <li>
+        <img src="images/certificate1.png" alt="Certificate 1">
+        <strong>Unity Game Development Training Program</strong>
+        <p>Hands-on Unity projects, C# scripting, and immersive game mechanics to bring creative ideas to life.</p>
+      </li>
     </ul>
   </section>
 
+  <!-- PROJECTS SECTION -->
+ <section id="projects">
+  <h2>Projects</h2>
+  <div class="projects-container">
+    <a href="project.html?id=project1" class="project-card">
+      <img src="images/Exitthedead.png" alt="Project 1">
+      <h3>Project Name 1</h3>
+      <p>A short engaging teaser about Project 1…</p>
+    </a>
+    <a href="project.html?id=project2" class="project-card">
+      <img src="images/project2-thumb.png" alt="Project 2">
+      <h3>Project Name 2</h3>
+      <p>A cool game concept with unique mechanics…</p>
+    </a>
+  </div>
+</section>
+
+  <!-- CONTACT SECTION -->
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: your.email@example.com</p>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <p>© 2025 Wajeeha Noor</p>
   </footer>
+<script src="script.js"></script>
+
 </body>
 </html>
