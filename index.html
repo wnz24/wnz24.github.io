@@ -1,94 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
-
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    /* nav a::after {
-      content: ' 🔗';
-    } */
-    #contact p::before {
-      content: '📧 ';
-    }
-    #projects li::before {
-      content: '🎮 ';
-      margin-right: 0.5rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Chen - Game Developer</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
-
 <body>
+    <div class="scanlines"></div>
+    
+    <!-- Navigation -->
+   <nav>
+        <div class="logo">[ WN_DEV ]</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-  <!-- HEADER -->
-  <header>
-    <h1>Wajeeha Noor</h1>
-    <p>Game Developer | Creator 🎮</p>
-  </header>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="particles" id="particles"></div>
+        <div class="hero-content">
+            <h1 class="glitch">ALEX CHEN</h1>
+            <p class="subtitle">Game Developer & Technical Artist</p>
+            <button class="cta-button">View Projects</button>
+        </div>
+    </section>
 
-  <!-- NAVIGATION -->
- <nav>
-  <a data-section="about">About</a>
-  <a data-section="certificates">Certificates</a>
-  <a data-section="projects">Projects</a>
-  <a data-section="contact">Contact</a>
-</nav>
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>[ PROJECTS ]</h2>
+        <div class="projects-grid" id="projectsGrid">
+            <!-- Projects will be loaded dynamically -->
+        </div>
+    </section>
 
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>[ SKILLS ]</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Game Engines</h3>
+                <ul>
+                    <li>Unity 3D/2D</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li>C#</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                </ul>
+            </div>
+            <!-- Add other skill categories -->
+        </div>
+    </section>
 
-  <!-- ABOUT SECTION -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I'm Wajeeha Noor, a passionate game developer dedicated to creating immersive and engaging experiences. I specialize in Unity/C# and have experience designing gameplay mechanics, building interactive worlds, and bringing characters to life. ✨</p>
-    <p>I thrive on turning creative ideas into playable adventures, collaborating with teams, and constantly learning new technologies to push the boundaries of game design. My goal is to craft games that captivate players and leave a lasting impression. 🚀</p>
-  </section>
+     <!-- Certifications Section -->
+    <section id="certifications">
+        <h2>[ CERTIFICATIONS ]</h2>
+        <div class="cert-card" data-cert-id="0">
+    <div class="cert-icon">🏅</div>
+    <h3 class="cert-title">Unity Certified Developer</h3>
+    <p class="cert-issuer">Unity Technologies</p>
+    <p class="cert-date">Issued: June 2023</p>
+    <p class="cert-description">Professional certification demonstrating proficiency in Unity development, including C# programming, physics, and optimization.</p>
+    <button class="cert-link view-cert-btn">View Certificate</button>
+</div>
 
-  <!-- CERTIFICATES SECTION -->
-  <section id="certificates">
-    <h2>Certificates</h2>
-    <ul>
-      <li>
-        <img src="images/certificate1.png" alt="Certificate 1">
-        <strong>Unity Game Development Training Program</strong>
-        <p>Hands-on Unity projects, C# scripting, and immersive game mechanics to bring creative ideas to life.</p>
-      </li>
-    </ul>
-  </section>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact">
+            <h2>[ GET IN TOUCH ]</h2>
+            <p style="color: #b0b0b0; margin-bottom: 2rem;">
+                Interested in collaborating or have a project in mind? Let's create something amazing together.
+            </p>
+            <div class="contact-links">
+                <a href="mailto:alex@gamedev.com" class="contact-link">Email</a>
+                <a href="#" class="contact-link">LinkedIn</a>
+                <a href="#" class="contact-link">GitHub</a>
+                <a href="#" class="contact-link">Twitter</a>
+            </div>
+        </div>
+    </section>
 
-  <!-- PROJECTS SECTION -->
- <section id="projects">
-  <h2>Projects</h2>
-  <div class="projects-container">
-    <a href="project.html?id=project1" class="project-card">
-      <img src="images/Exitthedead.png" alt="Project 1">
-      <h3>Project Name 1</h3>
-      <p>A short engaging teaser about Project 1…</p>
-    </a>
-    <a href="project.html?id=project2" class="project-card">
-      <img src="images/project2-thumb.png" alt="Project 2">
-      <h3>Project Name 2</h3>
-      <p>A cool game concept with unique mechanics…</p>
-    </a>
-  </div>
-</section>
+    <footer>
+        <p>&copy; 2024 Alex Chen. All rights reserved. Made with passion for games.</p>
+    </footer>
 
-  <!-- CONTACT SECTION -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: your.email@example.com</p>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Wajeeha Noor</p>
-  </footer>
-<script src="script.js"></script>
-
+    <!-- Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-wrapper">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeModal()">×</button>
+                <div id="modalBody"></div>
+            </div>
+        </div>
+    </div>
+<!-- Certificate Modal -->
+<div id="certificateModal" class="modal cert-modal">
+    <div class="modal-wrapper">
+        <div class="modal-content cert-modal-content">
+            <button class="close-btn" onclick="closeCertModal()">×</button>
+            <div id="certModalBody"></div>
+        </div>
+    </div>
+</div>
+    <!-- Scripts -->
+   <script src="js/projects-data.js"></script>
+    <script src="js/certification-data.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/certification.js"></script>
 </body>
 </html>

@@ -1,0 +1,984 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wajeeha Noor - Game Developer</title> -->
+    <!-- <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: #0a0e27;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, 
+                rgba(255, 255, 255, 0) 50%, 
+                rgba(0, 0, 0, 0.1) 50%);
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 1000;
+            opacity: 0.1;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 14, 39, 0.95);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            border-bottom: 2px solid #00ff88;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00ff88;
+            text-shadow: 0 0 10px #00ff88;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #00ff88;
+            text-shadow: 0 0 10px #00ff88;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #00ff88;
+            opacity: 0.5;
+            animation: float 15s infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            25% { transform: translateY(-100px) translateX(50px); }
+            50% { transform: translateY(-200px) translateX(-30px); }
+            75% { transform: translateY(-100px) translateX(-70px); }
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 10;
+        }
+
+        .glitch {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #00ff88;
+            text-shadow: 0 0 20px #00ff88;
+            margin-bottom: 1rem;
+            animation: glitch 3s infinite;
+        }
+
+        @keyframes glitch {
+            0%, 90%, 100% { transform: translate(0); }
+            92% { transform: translate(-2px, 2px); }
+            94% { transform: translate(2px, -2px); }
+            96% { transform: translate(-2px, -2px); }
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            background: transparent;
+            border: 2px solid #00ff88;
+            color: #00ff88;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .cta-button:hover {
+            background: #00ff88;
+            color: #0a0e27;
+            box-shadow: 0 0 20px #00ff88;
+        }
+
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #00ff88;
+            margin-bottom: 3rem;
+            text-align: center;
+            text-shadow: 0 0 10px #00ff88;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: rgba(20, 25, 50, 0.8);
+            border: 2px solid #1a1f40;
+            padding: 1.5rem;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .project-card:hover::before {
+            left: 100%;
+        }
+
+        .project-card:hover {
+            border-color: #00ff88;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #1a1f40, #2a2f50);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            color: #00ff88;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-description {
+            color: #b0b0b0;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(0, 255, 136, 0.1);
+            border: 1px solid #00ff88;
+            color: #00ff88;
+            padding: 0.3rem 0.8rem;
+            font-size: 0.8rem;
+            border-radius: 3px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: rgba(20, 25, 50, 0.8);
+            border: 2px solid #1a1f40;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .skill-category:hover {
+            border-color: #00ff88;
+        }
+
+        .skill-category h3 {
+            color: #00ff88;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 0.5rem 0;
+            color: #b0b0b0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .skill-category li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #00ff88;
+        }
+
+        .contact {
+            background: rgba(20, 25, 50, 0.8);
+            border: 2px solid #00ff88;
+            padding: 3rem;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            color: #00ff88;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            padding: 1rem;
+            border: 1px solid transparent;
+        }
+
+        .contact-link:hover {
+            border-color: #00ff88;
+            text-shadow: 0 0 10px #00ff88;
+        }
+
+        .view-details-btn {
+            margin-top: 1rem;
+            width: 100%;
+            background: transparent;
+            border: 1px solid #00ff88;
+            color: #00ff88;
+            padding: 0.7rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        .view-details-btn:hover {
+            background: rgba(0, 255, 136, 0.1);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            overflow-y: auto;
+            animation: fadeIn 0.3s;
+        }
+
+        .modal.active {
+            display: block;
+            padding: 2rem;
+        }
+
+        .modal-wrapper {
+            max-width: 900px;
+            margin: 2rem auto;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: #0a0e27;
+            border: 2px solid #00ff88;
+            max-width: 900px;
+            width: 100%;
+            padding: 3rem;
+            position: relative;
+            animation: slideUp 0.3s;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: transparent;
+            border: 2px solid #00ff88;
+            color: #00ff88;
+            width: 40px;
+            height: 40px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .close-btn:hover {
+            background: #00ff88;
+            color: #0a0e27;
+            transform: rotate(90deg);
+        }
+
+        .modal-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #1a1f40;
+        }
+
+        .modal-icon {
+            font-size: 4rem;
+        }
+
+        .modal-title {
+            font-size: 2.5rem;
+            color: #00ff88;
+            text-shadow: 0 0 10px #00ff88;
+        }
+
+        .modal-section {
+            margin-bottom: 2rem;
+        }
+
+        .modal-section h3 {
+            color: #00ff88;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            border-left: 3px solid #00ff88;
+            padding-left: 1rem;
+        }
+
+        .modal-section p, .modal-section li {
+            color: #b0b0b0;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .modal-section li {
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .modal-section li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #00ff88;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 0.7rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .tech-badge {
+            background: rgba(0, 255, 136, 0.1);
+            border: 1px solid #00ff88;
+            color: #00ff88;
+            padding: 0.5rem 1rem;
+            border-radius: 3px;
+            font-size: 0.9rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .project-link {
+            flex: 1;
+            background: transparent;
+            border: 2px solid #00ff88;
+            color: #00ff88;
+            padding: 1rem;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-family: 'Courier New', monospace;
+            display: block;
+        }
+
+        .project-link:hover {
+            background: #00ff88;
+            color: #0a0e27;
+            box-shadow: 0 0 20px #00ff88;
+        }
+
+        .screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .screenshot {
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(135deg, #1a1f40, #2a2f50);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #1a1f40;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .screenshot:hover {
+            border-color: #00ff88;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            border-top: 1px solid #1a1f40;
+        }
+
+        @media (max-width: 768px) {
+            .glitch {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style> -->
+<!-- </head>
+<body>
+    <div class="scanlines"></div>
+     -->
+    <!-- <nav>
+        <div class="logo">[ AX_DEV ]</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav> -->
+
+    <!-- <section id="home" class="hero">
+        <div class="particles" id="particles"></div>
+        <div class="hero-content">
+            <h1 class="glitch">Wajeeha Noor</h1>
+            <p class="subtitle">Game Developer</p>
+            <button class="cta-button" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">
+                View Projects
+            </button>
+        </div>
+    </section> -->
+
+    <!-- <section id="projects">
+        <h2>[ PROJECTS ]</h2>
+        <div class="projects-grid">
+            <div class="project-card" data-project="0">
+                <div class="project-image">🎮</div>
+                <h3 class="project-title">Neon Runner</h3>
+                <p class="project-description">A fast-paced endless runner set in a cyberpunk city with procedurally generated levels and dynamic obstacles.</p>
+                <div class="project-tags">
+                    <span class="tag">Unity</span>
+                    <span class="tag">C#</span>
+                    <span class="tag">Procedural Gen</span>
+                </div>
+                <button class="view-details-btn">View Details →</button>
+            </div>
+
+            <div class="project-card" data-project="1">
+                <div class="project-image">⚔️</div>
+                <h3 class="project-title">Shadow Realm</h3>
+                <p class="project-description">2D action RPG with hand-drawn animations, complex combat system, and branching narrative.</p>
+                <div class="project-tags">
+                    <span class="tag">Unreal Engine</span>
+                    <span class="tag">Blueprint</span>
+                    <span class="tag">2D</span>
+                </div>
+                <button class="view-details-btn">View Details →</button>
+            </div>
+
+            <div class="project-card" data-project="2">
+                <div class="project-image">🌌</div>
+                <h3 class="project-title">Void Explorer</h3>
+                <p class="project-description">Space exploration game with realistic physics, resource management, and a vast procedurally generated universe.</p>
+                <div class="project-tags">
+                    <span class="tag">Godot</span>
+                    <span class="tag">GDScript</span>
+                    <span class="tag">3D</span>
+                </div>
+                <button class="view-details-btn">View Details →</button>
+            </div>
+
+            <div class="project-card" data-project="3">
+                <div class="project-image">🧩</div>
+                <h3 class="project-title">Quantum Puzzle</h3>
+                <p class="project-description">Mind-bending puzzle game exploring quantum mechanics concepts through interactive gameplay mechanics.</p>
+                <div class="project-tags">
+                    <span class="tag">Unity</span>
+                    <span class="tag">C#</span>
+                    <span class="tag">Puzzle</span>
+                </div>
+                <button class="view-details-btn">View Details →</button>
+            </div>
+
+            <div class="project-card" data-project="4">
+                <div class="project-image">🏆</div>
+                <h3 class="project-title">Arena Clash</h3>
+                <p class="project-description">Multiplayer battle arena with competitive matchmaking, character abilities, and seasonal content updates.</p>
+                <div class="project-tags">
+                    <span class="tag">Unreal</span>
+                    <span class="tag">C++</span>
+                    <span class="tag">Multiplayer</span>
+                </div>
+                <button class="view-details-btn">View Details →</button>
+            </div>
+
+            <div class="project-card" data-project="5">
+                <div class="project-image">🎨</div>
+                <h3 class="project-title">Shader Toolkit</h3>
+                <p class="project-description">Collection of custom shaders and visual effects for game developers, optimized for mobile platforms.</p>
+                <div class="project-tags">
+                    <span class="tag">HLSL</span>
+                    <span class="tag">GLSL</span>
+                    <span class="tag">Shaders</span>
+                </div>
+                <button class="view-details-btn">View Details →</button>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- <section id="skills">
+        <h2>[ SKILLS ]</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Game Engines</h3>
+                <ul>
+                    <li>Unity 3D</li>
+                    <li>Unreal Engine</li>
+                    <li>Godot</li>
+                    <li>GameMaker Studio</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Programming</h3>
+                <ul>
+                    <li>C# / C++</li>
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>HLSL / GLSL</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Art & Design</h3>
+                <ul>
+                    <li>Blender</li>
+                    <li>Maya</li>
+                    <li>Substance Painter</li>
+                    <li>Photoshop</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Specializations</h3>
+                <ul>
+                    <li>Gameplay Programming</li>
+                    <li>Shader Development</li>
+                    <li>AI & Pathfinding</li>
+                    <li>Multiplayer Systems</li>
+                </ul>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- <section id="contact">
+        <div class="contact">
+            <h2>[ GET IN TOUCH ]</h2>
+            <p style="color: #b0b0b0; margin-bottom: 2rem;">
+                Interested in collaborating or have a project in mind? Let's create something amazing together.
+            </p>
+            <div class="contact-links">
+                <a href="mailto:alex@gamedev.com" class="contact-link">Email</a>
+                <a href="#" class="contact-link">LinkedIn</a>
+                <a href="#" class="contact-link">GitHub</a>
+                <a href="#" class="contact-link">Twitter</a>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- <footer>
+        <p>&copy; 2024 Alex Chen. All rights reserved. Made with passion for games.</p>
+    </footer> -->
+
+    <!-- Project Details Modal -->
+    <!-- <div id="projectModal" class="modal">
+        <div class="modal-wrapper">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeModal()">×</button>
+                <div id="modalBody"></div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <script>
+        // Project data
+        const projects = [
+            {
+                icon: '🎮',
+                title: 'Neon Runner',
+                shortDesc: 'A fast-paced endless runner set in a cyberpunk city',
+                fullDesc: 'Neon Runner is an adrenaline-pumping endless runner that takes players through a vibrant cyberpunk metropolis. The game features a sophisticated procedural generation system that creates unique levels every time, ensuring no two runs are ever the same. Players navigate through neon-lit streets, dodging obstacles, and collecting power-ups while the difficulty progressively increases.',
+                role: 'Lead Developer & Technical Designer',
+                duration: '8 months (Jan 2023 - Aug 2023)',
+                team: '4 developers, 2 artists, 1 sound designer',
+                features: [
+                    'Advanced procedural level generation with weighted difficulty curves',
+                    'Dynamic weather system affecting gameplay mechanics',
+                    'Custom shader effects for neon lighting and particle systems',
+                    'Leaderboard integration with anti-cheat measures',
+                    'Achievement system with 50+ unlockable rewards',
+                    'Responsive controls optimized for mobile devices'
+                ],
+                challenges: [
+                    'Optimizing procedural generation for mobile platforms without compromising visual quality',
+                    'Balancing difficulty progression to maintain player engagement',
+                    'Implementing efficient object pooling for smooth 60 FPS gameplay'
+                ],
+                tech: ['Unity 2021', 'C#', 'DOTween', 'Addressables', 'Unity Analytics', 'PlayFab'],
+                github: '#',
+                demo: '#'
+            },
+            {
+                icon: '⚔️',
+                title: 'Shadow Realm',
+                shortDesc: '2D action RPG with hand-drawn animations',
+                fullDesc: 'Shadow Realm is a dark fantasy 2D action RPG that combines fluid combat mechanics with a deep, branching narrative. Players explore a beautifully crafted world filled with dangerous enemies, hidden secrets, and moral choices that impact the story. Every animation is hand-drawn, giving the game a unique artistic style.',
+                role: 'Gameplay Programmer & Combat Designer',
+                duration: '14 months (Mar 2022 - May 2023)',
+                team: '6 developers, 3 artists, 1 writer, 1 composer',
+                features: [
+                    'Frame-perfect combat system with 8 unique weapon types',
+                    'Branching narrative with 5 different endings',
+                    'Over 200 hand-drawn enemy animations',
+                    'Dynamic music system that responds to combat intensity',
+                    'Skill tree with 60+ unique abilities',
+                    'New Game+ mode with enhanced difficulty'
+                ],
+                challenges: [
+                    'Creating tight, responsive combat controls in a 2D environment',
+                    'Managing complex state machines for enemy AI behaviors',
+                    'Optimizing rendering for dozens of simultaneous particle effects'
+                ],
+                tech: ['Unreal Engine 4', 'Blueprint', 'Paper2D', 'Wwise Audio', 'Perforce'],
+                github: '#',
+                demo: '#'
+            },
+            {
+                icon: '🌌',
+                title: 'Void Explorer',
+                shortDesc: 'Space exploration with realistic physics',
+                fullDesc: 'Void Explorer is an ambitious space exploration game that emphasizes realistic physics and survival mechanics. Players pilot their spacecraft through a procedurally generated universe, managing resources, discovering new planets, and encountering both friendly and hostile alien civilizations. The game features a full Newtonian physics engine for authentic space flight.',
+                role: 'Lead Programmer & Systems Designer',
+                duration: '18 months (Sep 2021 - Mar 2023)',
+                team: '5 developers, 2 artists, 1 sound designer',
+                features: [
+                    'Full 3D Newtonian physics for realistic space flight',
+                    'Procedurally generated universe with billions of star systems',
+                    'Complex resource management and crafting system',
+                    'Dynamic faction relationships and diplomacy',
+                    'Planetary landing and exploration mechanics',
+                    'Mod support with custom scripting API'
+                ],
+                challenges: [
+                    'Implementing stable Newtonian physics at astronomical scales',
+                    'Creating an efficient LOD system for rendering at multiple scales',
+                    'Designing intuitive controls for 6-degrees-of-freedom movement'
+                ],
+                tech: ['Godot 3.5', 'GDScript', 'Custom Physics Engine', 'SQLite', 'WebSocket'],
+                github: '#',
+                demo: '#'
+            },
+            {
+                icon: '🧩',
+                title: 'Quantum Puzzle',
+                shortDesc: 'Mind-bending puzzle game with quantum mechanics',
+                fullDesc: 'Quantum Puzzle is an innovative puzzle game that makes quantum mechanics concepts accessible through engaging gameplay. Players manipulate quantum states, create superpositions, and solve increasingly complex puzzles that would make Schrödinger proud. The game serves as both entertainment and education.',
+                role: 'Solo Developer',
+                duration: '6 months (Jul 2023 - Dec 2023)',
+                team: 'Solo project with contracted art and music',
+                features: [
+                    'Intuitive visualization of quantum concepts',
+                    '100+ hand-crafted puzzle levels',
+                    'Level editor with community sharing features',
+                    'Progressive difficulty with educational hints',
+                    'Minimalist art style that emphasizes clarity',
+                    'Ambient soundtrack that enhances concentration'
+                ],
+                challenges: [
+                    'Making complex quantum concepts understandable through gameplay',
+                    'Designing puzzles that are challenging but not frustrating',
+                    'Creating clear visual feedback for abstract concepts'
+                ],
+                tech: ['Unity 2022', 'C#', 'DOTween', 'Steam Workshop API', 'Unity UI Toolkit'],
+                github: '#',
+                demo: '#'
+            },
+            {
+                icon: '🏆',
+                title: 'Arena Clash',
+                shortDesc: 'Competitive multiplayer battle arena',
+                fullDesc: 'Arena Clash is a fast-paced multiplayer battle arena game featuring intense 5v5 matches. With a roster of 20 unique characters, each with distinct abilities and playstyles, the game offers deep strategic gameplay and high skill ceiling. Regular content updates keep the meta fresh and exciting.',
+                role: 'Network Programmer & Gameplay Engineer',
+                duration: '20 months (Jan 2022 - Aug 2023)',
+                team: '12 developers, 5 artists, 2 game designers, 1 community manager',
+                features: [
+                    'Dedicated server architecture with lag compensation',
+                    '20 unique characters with over 80 abilities',
+                    'Ranked matchmaking with ELO rating system',
+                    'Spectator mode with replay system',
+                    'Seasonal content with new characters and maps',
+                    'Anti-cheat system and report functionality'
+                ],
+                challenges: [
+                    'Implementing client-side prediction and server reconciliation',
+                    'Balancing characters for competitive play',
+                    'Optimizing network traffic for smooth 60-tick servers'
+                ],
+                tech: ['Unreal Engine 5', 'C++', 'Photon Server', 'AWS', 'PostgreSQL', 'Redis'],
+                github: '#',
+                demo: '#'
+            },
+            {
+                icon: '🎨',
+                title: 'Shader Toolkit',
+                shortDesc: 'Custom shaders optimized for mobile',
+                fullDesc: 'Shader Toolkit is a comprehensive collection of optimized shaders and visual effects designed specifically for mobile game development. The toolkit includes water shaders, toon shading, particle effects, and post-processing effects, all optimized to run smoothly on mobile devices without sacrificing visual quality.',
+                role: 'Technical Artist & Shader Developer',
+                duration: 'Ongoing (Started Mar 2023)',
+                team: 'Solo project with community contributions',
+                features: [
+                    '50+ production-ready shader effects',
+                    'Optimized for mobile GPU architectures',
+                    'Extensive documentation with usage examples',
+                    'Compatible with Unity and Unreal Engine',
+                    'Performance profiling tools included',
+                    'Regular updates based on community feedback'
+                ],
+                challenges: [
+                    'Achieving console-quality visuals within mobile performance budgets',
+                    'Maintaining compatibility across different GPU vendors',
+                    'Creating user-friendly interfaces for shader customization'
+                ],
+                tech: ['HLSL', 'GLSL', 'ShaderLab', 'Amplify Shader Editor', 'RenderDoc'],
+                github: '#',
+                demo: '#'
+            }
+        ];
+
+        // Generate particles
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 50; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 15 + 's';
+            particlesContainer.appendChild(particle);
+        }
+
+        // Show project details function
+        function showProjectDetails(index) {
+            const project = projects[index];
+            const modal = document.getElementById('projectModal');
+            const modalBody = document.getElementById('modalBody');
+            
+            modalBody.innerHTML = `
+                <div class="modal-header">
+                    <div class="modal-icon">${project.icon}</div>
+                    <h2 class="modal-title">${project.title}</h2>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Overview</h3>
+                    <p>${project.fullDesc}</p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Project Details</h3>
+                    <p><strong style="color: #00ff88;">Role:</strong> ${project.role}</p>
+                    <p><strong style="color: #00ff88;">Duration:</strong> ${project.duration}</p>
+                    <p><strong style="color: #00ff88;">Team Size:</strong> ${project.team}</p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Key Features</h3>
+                    <ul>
+                        ${project.features.map(f => `<li>${f}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Technical Challenges</h3>
+                    <ul>
+                        ${project.challenges.map(c => `<li>${c}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Technology Stack</h3>
+                    <div class="tech-stack">
+                        ${project.tech.map(t => `<span class="tech-badge">${t}</span>`).join('')}
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Screenshots</h3>
+                    <div class="screenshots">
+                        <div class="screenshot">📸 Screenshot 1</div>
+                        <div class="screenshot">📸 Screenshot 2</div>
+                        <div class="screenshot">📸 Screenshot 3</div>
+                    </div>
+                </div>
+                
+                <div class="project-links">
+                    <a href="${project.github}" class="project-link">View on GitHub</a>
+                    <a href="${project.demo}" class="project-link">Play Demo</a>
+                </div>
+            `;
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close modal function
+        function closeModal() {
+            const modal = document.getElementById('projectModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Add click event listeners to project cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const projectIndex = parseInt(this.getAttribute('data-project'));
+                    showProjectDetails(projectIndex);
+                });
+            });
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('projectModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script> -->
+<!-- </body>
+</html> -->
